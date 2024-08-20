@@ -1,6 +1,6 @@
 class Attempt < ApplicationRecord
   enum status: [:fail, :error, :success]
-  enum kinds: [:create_order_tiny_1, :create_order_tiny_2]
+  enum kinds: [:translovato_send, :sanear_send]
   # Callbacks
   # Associacoes
 

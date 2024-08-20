@@ -1,9 +1,9 @@
 <div class="row">
   <% case params[:kinds] %>
-  <% when 'create_order_tiny_1' %>
-    <% title 'Tentativas de Criação de Pedidos no Tiny 1' %>
-  <% when 'create_order_tiny_2' %>
-    <% title 'Tentativas de Criação de Pedidos no Tiny 2' %>
+  <% when 'translovato_send' %>
+    <% title 'Tentativas de Integração Translovato' %>
+  <% when 'sanear_send' %>
+    <% title 'Tentativas de Integração Sanear' %>
   <% end %>
 </div>
 
@@ -26,7 +26,7 @@
       <div class="row">
         <div class="col-sm-12">
           <%= label_tag :search, 'Procurar' %>
-          <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Pesquise por número pedido Tiny/Nota Fiscal ou por erro' %>
+          <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Pesquise por número pedido Bling/Nota Fiscal ou por erro' %>
         </div>
       </div>
     </div>
@@ -43,7 +43,7 @@
         <tr>
           <th width="50" class="text-center"><i class="fa fa-ellipsis-v"></i></th>
           <th class="text-center"><%= 'ID' %></th>
-          <th class="text-center"><%= 'Pedido no Tiny' %></th>
+          <th class="text-center"><%= 'Pedido no Bling' %></th>
           <th class="text-center"><%= Attempt.human_attribute_name :id_nota_fiscal %></th>
           <th class="text-center"><%= Attempt.human_attribute_name :kinds %></th>
           <th class="text-center"><%= Attempt.human_attribute_name :status %></th>
@@ -65,9 +65,9 @@
             </td>
             <td class="text-center"><%= attempt.id %></td>
             <td class="text-center">
-              <%= attempt.tiny_order_id %> - 
+              <%= attempt.bling_order_id %> - 
               <span class="badge bg-primary" style="cursor: pointer;" onclick="window.open('<%=ENV.fetch('TINY_SELLS_URL')%>#edit/<%= attempt.tiny_order_id %>', '_blank');">
-                Ver no Tiny
+                Ver no Bling
               </span>
             </td>
             <td class="text-center"><%= attempt.id_nota_fiscal %></td>

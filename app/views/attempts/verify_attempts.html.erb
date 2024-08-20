@@ -5,7 +5,7 @@
     <thead>
       <tr>
         <th class="text-center"><%= Attempt.human_attribute_name :id %></th>
-        <th class="text-center"><%= Attempt.human_attribute_name :tiny_order_id %></th>
+        <th class="text-center"><%= Attempt.human_attribute_name :bling_order_id %></th>
         <th class="text-center"><%= Attempt.human_attribute_name :kinds %></th>
         <th class="text-center"><%= Attempt.human_attribute_name :message %></th>
         <th class="text-center"><%= Attempt.human_attribute_name :status %></th>
@@ -20,9 +20,9 @@
         <tr>
           <td class="text-center"><%= attempt.id %></td>
           <td class="text-center" style="min-width:12em;">
-            <%= attempt.tiny_order_id  %> -
-            <span class="badge bg-primary" style="cursor: pointer;" onclick="window.open('<%=ENV.fetch('TINY_SELLS_URL')%>#edit/<%= attempt.tiny_order_id  %>', '_blank');">
-              Ver no Tiny
+            <%= attempt.bling_order_id  %> -
+            <span class="badge bg-primary" style="cursor: pointer;" onclick="window.open('<%=ENV.fetch('TINY_SELLS_URL')%>#edit/<%= attempt.bling_order_id  %>', '_blank');">
+              Ver no Bling
             </span>
           </td>
           <td class="text-center"><%= attempt.kinds %></td>
