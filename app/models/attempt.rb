@@ -8,10 +8,7 @@ class Attempt < ApplicationRecord
 
   # Escopos
   add_scope :search do |value|
-    where('attempts.tiny_order_id LIKE :valor OR
-           attempts.error LIKE :valor OR
-           attempts.message LIKE :valor OR
-           attempts.id LIKE :valor', valor: "#{value}%")
+    where('bling_order_id::text ILIKE :value OR message ILIKE :value OR error ILIKE :value OR id::text ILIKE :value', value: "%#{value}%")
   end
   # Metodos estaticos
   # Metodos publicos
