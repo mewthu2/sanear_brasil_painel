@@ -4,7 +4,7 @@
 
 <h1 align="center">Painel Administrativo</h1>
 
-Este é o painel administrativo para a Sanear Brasil, para controle de movimentação logística. É construído na arquitetura monolítica do Rails 7.1.3 e usa Ruby 3.2.2 como linguagem de programação. Ele também faz uso de recursos do Hotwire para uma experiência de usuário interativa e responsiva.
+Este é o painel administrativo para a Sanear Brasil, para controle de movimentação logística. É construído na arquitetura monolítica do Rails 7.2 e usa Ruby 3.2.2 como linguagem de programação. Ele também faz uso de recursos do Hotwire para uma experiência de usuário interativa e responsiva.
 
 ## Requisitos
 
