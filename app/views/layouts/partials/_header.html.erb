@@ -1,0 +1,19 @@
+<header class="navbar-header bg-dark">
+  <div class="navbar-brand">
+    <div class="brand-logo bg-white">
+      <%= image_tag 'admin/logo', style: 'width:60%;' %>
+    </div>
+  </div>
+  <div class="navbar-content text-white">
+    <%= yield :title %>
+  </div>
+  <div class="navbar-dropdowns">
+    <nav class="navbar navbar-expand-sm">
+      <div class="dropdown" style="margin-top: 12px; margin-right: -12em;">
+        <%= image_tag 'admin/usuario-200x200', style: 'width:10%; border-radius: 50%;' %>
+        <strong class="text-white"><%= current_user.name %></strong>
+        <%= link_to destroy_user_session_path(current_user), data: { turbo: :false } do %>Sair<% end %>
+      </div>
+    </nav>
+  </div>
+</header>

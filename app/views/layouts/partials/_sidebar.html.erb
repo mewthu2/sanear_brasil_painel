@@ -1,0 +1,122 @@
+<aside class="left-menu bg-dark">
+  <div class="aside-inner">
+    <div class="flex-shrink-0 p-3 text-white">
+      <ul class="nav nav-pills flex-column mb-auto">
+        <a class="btn btn-secondary text-warning mb-3" href="/" role="button">
+          <i class="fa-regular fa-house"></i> <span class="name-button"> Home </span>
+        </a>
+        
+        <a class="btn btn-secondary text-warning mb-3" data-bs-toggle="collapse" href="#collase-dashboard" role="button" aria-expanded="false" aria-controls="collase-dashboard">
+          <i class="justify-content-center fa-regular fa-concierge-bell"></i> <span class="name-button"> Dashboard </span><i class="fa fa-angle-down arrow"></i>
+        </a>
+        <div class="justify-content-center flex-column mb-auto collapse mb-3" id="collase-dashboard">
+          <div class="mb-3 col-icon"> 
+            <%= link_to dashboard_index_path, class: 'text-light link' do %>
+              <i class="fa-solid fa-binoculars text-warning"></i>
+              <span class="name-col text-white">
+                Teste
+              </span>
+            <% end %>
+          </div>
+        </div>
+
+        <a class="btn btn-secondary text-warning mb-3" data-bs-toggle="collapse" href="#collase-users" role="button" aria-expanded="false" aria-controls="collase-correios">
+          <i class="fa-regular fa-gear"></i> <span class="name-button">Administração </span> <i class="fa fa-angle-down arrow"></i>
+        </a>
+
+        <div class="justify-content-center flex-column mb-auto collapse mb-3" id="collase-users">
+          <div class="mb-3 col-icon"> 
+            <%= link_to users_path, class: 'text-light link' do %>
+              <i class="fa-solid fa-user text-warning link"></i>
+              <span class="name-col">
+                Usuários
+              </span>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="justify-content-center flex-column mb-auto collapse mb-3" id="collase-users">
+          <div class="mb-3 col-icon"> 
+            <%= link_to profiles_path, class: 'text-light link' do %>
+              <i class="fa-solid fa-id-badge text-warning link"></i>
+              <span class="name-col">
+                Perfis de usuário
+              </span>
+            <% end %>
+          </div>
+        </div>
+
+        <a class="btn btn-secondary text-warning mb-3" data-bs-toggle="collapse" href="#collase-attempts" role="button" aria-expanded="false" aria-controls="collase-correios">
+          <i class="fa-regular fa-hourglass"></i> <span class="name-button">Histórico de Tentativas </span> <i class="fa fa-angle-down arrow"></i>
+        </a>
+
+        <div class="justify-content-center flex-column mb-auto collapse mb-3" id="collase-attempts">
+          <div class="mb-3 col-icon"> 
+            <%= link_to attempts_path(kinds: :create_order_tiny_1), class: 'text-light link' do %>
+              <i class="fa-solid fa-file-invoice text-warning link"></i>
+              <span class="name-col">
+                Criação pedidos no Tiny 1
+              </span>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="justify-content-center flex-column mb-auto collapse mb-3" id="collase-attempts">
+          <div class="mb-3 col-icon"> 
+            <%= link_to attempts_path(kinds: :create_order_tiny_2), class: 'text-light link' do %>
+              <i class="fa-solid fa-file-invoice text-warning link"></i>
+              <span class="name-col">
+                Criação pedidos no Tiny 2
+              </span>
+            <% end %>
+          </div>
+        </div>
+
+        <a class="btn btn-secondary text-warning mb-3" href="/" role="button">
+          <i class="fa-regular fa-file-circle-plus"></i> <span class="name-button"> Pedidos </span>
+        </a>
+      </ul>
+    </div>
+  </div>
+  <hr>
+</aside>
+<style>
+  @media (max-width: 999px) {
+    
+  .navbar-header .navbar-content {
+    display:none !important;
+  }
+  .col-icon {
+    display: flex;
+    justify-content: center;
+  }
+  .name-col {
+    display:none;
+  }
+
+  .navbar-header .navbar-dropdowns {
+    float: inline-start;
+  }
+
+  .left-menu {
+    width: 70px !important;
+  }
+  
+  .wrapper > section:not(.sem-menu) {
+    margin-left: 60px !important;
+  }
+
+  .navbar-header .navbar-brand .brand-logo,
+  .navbar-header .navbar-brand  {
+    width: 205px !important;
+  }
+
+  .wrapper > section > .content-wrapper .row {
+    margin-top: -7px !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  
+}
+</style>

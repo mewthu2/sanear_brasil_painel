@@ -1,0 +1,69 @@
+<div class="login">
+  <div class="main">
+    <div class="d1"></div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+    <div class="d4"></div>
+  </div>
+  <div class="main_login d-flex justify-content-center">
+    <div class="login-text row d-flex justify-content-center">
+      <div class="col-12">
+        <%= render 'layouts/partials/messages' %>
+        <div class="d-flex justify-content-center">
+          <%= image_tag 'admin/logo.png', style: 'width:50%; margin-bottom: 15px;' %>
+        </div>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.label 'Seu e-mail:', class: 'text-primary' %><br />
+            <div class="input-group">
+              <div class="input-group-text"><i class="fas fa-envelope"></i></div>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class="field">
+            <%= f.label 'Sua senha:' ,class: 'text-primary' %><br />
+            <div class="input-group">
+              <div class="input-group-text"><i class="fas fa-lock"></i></div>
+              <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
+            </div>
+          </div>
+
+          <% if devise_mapping.rememberable? %>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label 'Lembrar-me' %>
+            </div>
+          <% end %>
+
+          <div class="actions">
+            <%= f.submit "Logar", class: 'btn btn-primary w-100' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  @media (max-width: 999px) {
+    .main {
+      display: none;
+    }
+  }
+  .login-text {
+    background-color: rgba(255, 255, 255, 0.7);
+    max-width: 60%;
+    padding: 2em;
+    border-radius: 1.5em;
+  }
+
+  .login {
+    margin-left: -19em !important;
+    margin-top: 4em !important;
+  }
+
+  .luminoso {
+    box-shadow: 0 0 21px 7px rgba(255, 255, 255, 0.7);
+  }
+</style>
